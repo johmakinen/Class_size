@@ -44,6 +44,7 @@ qqline(regular)
 # H1: m_small != m_regular
 
 wilcox.test(small,regular)
+ks.test(small,regular)
 t.test(small,regular)
 # p-value really small, reject H0.
 
