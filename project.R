@@ -11,9 +11,7 @@ df = Star[,c(1,2,3)]
 #Split data into small and regular sized classrooms and get he math scores for both of them.
 small = filter(df,classk == "small.class")$tmathssk
 regular = filter(df, classk== "regular")$tmathssk
-# Take only 1733 (random) observations of the regular sized classes. 
 
-#regular = sample(regular,size=1733)
 head(small)
 head(regular)
 #Descriptive statistics of the math scores.
@@ -44,8 +42,8 @@ qqline(regular)
 # H1: m_small != m_regular
 
 wilcox.test(small,regular)
-ks.test(small,regular)
-t.test(small,regular)
+#ks.test(small,regular)
+
 # p-value really small, reject H0.
 
 shapiro.test(small)
